@@ -2,12 +2,16 @@
 
 public class CameraControllerMono : MonoBehaviour
 {
+    [SerializeField] private Camera mainCamera;
     [SerializeField] private Transform cameraOrbit;
     [SerializeField] private HandleInputMono handleInput;
 
     [Header("Configuration")]
     [SerializeField] private Vector2 cameraRotationSpeed;
     [SerializeField] private Vector2 cameraXRotationLimits;
+
+
+    public Camera MainCamera { get => mainCamera; }
 
 
     private void LateUpdate()
